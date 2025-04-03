@@ -1,8 +1,8 @@
 # E-Tutor
-=======
+
 # 🚀 Landing Page com React + Golang
 
-Este projeto é uma Landing Page responsiva desenvolvida com **React** e estilizada com **Tailwind CSS**. Ele inclui botões interativos representando categorias, utilizando **Phosphor Icons** para os ícones.
+Este projeto é uma Landing Page responsiva desenvolvida com **React** e estilizada com **Tailwind CSS**. Ele inclui botões interativos representando categorias, utilizando **Phosphor Icons** para os ícones e back-end com **Golang**.
 
 ## 📦 Tecnologias Utilizadas
 - React.js
