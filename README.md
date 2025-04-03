@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # E-Tutor
 =======
 # 🚀 Landing Page com React + Golang
@@ -53,4 +52,3 @@ Este projeto é uma Landing Page responsiva desenvolvida com **React** e estiliz
 ## 📜 Licença
 Este projeto é de código aberto e pode ser usado livremente.
 
->>>>>>> 3b85c56 (Initial Commit)
