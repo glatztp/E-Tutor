@@ -6,7 +6,7 @@ export default function Categories() {
     { name: "Business", courses: "52,822 Courses", color: "bg-green-100", icon: <Handshake size={32} weight="bold" /> },
     { name: "Finance & Accounting", courses: "33,841 Courses", color: "bg-orange-100", icon: <ChartBar size={32} weight="bold" /> },
     { name: "IT & Software", courses: "22,649 Courses", color: "bg-red-100", icon: <ComputerTower size={32} weight="bold" /> },
-    { name: "Personal Development", courses: "20,126 Courses", color: "bg-orange-200", icon: <Lightbulb size={32} weight="bold" /> },
+    { name: "Personal Development", courses: "20,126 Courses", color: "bg-gray-50", icon: <Lightbulb size={32} weight="bold" /> },
     { name: "Office Productivity", courses: "13,932 Courses", color: "bg-gray-100", icon: <FileText size={32} weight="bold" /> },
     { name: "Marketing", courses: "12,068 Courses", color: "bg-purple-200", icon: <Megaphone size={32} weight="bold" /> },
     { name: "Photography & Video", courses: "6,198 Courses", color: "bg-gray-200", icon: <Camera size={32} weight="bold" /> },
