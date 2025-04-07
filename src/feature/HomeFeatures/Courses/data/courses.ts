@@ -1,7 +1,7 @@
-import Desing from "../../../assets/Desing.svg";
-import Business from "../../../assets/Bussines.svg";
-import Dev from "../../../assets/Dev.svg";
-import Marketing from "../../../assets/Marketing.svg";
+import Desing from "../../../../assets/Desing.svg";
+import Business from "../../../../assets/Bussines.svg";
+import Dev from "../../../../assets/Dev.svg";
+import Marketing from "../../../../assets/Marketing.svg";
 
 import { CourseType } from "../types/CourseType";
 

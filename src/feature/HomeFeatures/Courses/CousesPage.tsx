@@ -1,9 +1,9 @@
 import { Star } from "phosphor-react";
-import Desing from "../../assets/Desing.svg";
-import Business from "../../assets/Bussines.svg";
-import Dev from "../../assets/Dev.svg";
-import Marketing from "../../assets/Marketing.svg";
-import IT from "../../assets/IT.svg";
+import Desing from "../../../assets/Desing.svg";
+import Business from "../../../assets/Bussines.svg";
+import Dev from "../../../assets/Dev.svg";
+import Marketing from "../../../assets/Marketing.svg";
+import IT from "../../../assets/IT.svg";
 
 export default function Courses() {
   const categoryColors: Record<string, { bg: string; text: string }> = {

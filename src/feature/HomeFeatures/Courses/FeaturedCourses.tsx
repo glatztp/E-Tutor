@@ -1,9 +1,9 @@
 import { Star, Clock, Users, ChartLine } from "phosphor-react";
-import Desing from "../../assets/Desing.svg";
-import Business from "../../assets/Bussines.svg";
-import Dev from "../../assets/Dev.svg";
-import Marketing from "../../assets/Marketing.svg";
-import Avatar from "../../assets/Avatar.svg";
+import Desing from "../../../assets/Desing.svg";
+import Business from "../../../assets/Bussines.svg";
+import Dev from "../../../assets/Dev.svg";
+import Marketing from "../../../assets/Marketing.svg";
+import Avatar from "../../../assets/Avatar.svg";
 
 export default function FeaturedCourses() {
   const categoryColors: Record<string, { bg: string; text: string }> = {

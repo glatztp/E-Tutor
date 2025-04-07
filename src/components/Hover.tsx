@@ -6,7 +6,7 @@ import {
   Heart,
 } from "phosphor-react";
 import Avatar from "../assets/Avatar.svg";
-import { CourseType } from "../feature/Courses/types/CourseType";
+import { CourseType } from "../feature/HomeFeatures/Courses/types/CourseType";
 import { useState } from "react";
 
 type Props = {
