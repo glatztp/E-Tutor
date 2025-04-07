@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Star, Users } from "phosphor-react";
+import { Star, User, Users } from "phosphor-react";
 import Hover from "../../components/Hover";
 import { courses } from "../Courses/data/courses";
 
@@ -17,8 +17,8 @@ export default function RecentlyCourses() {
       const isLastInRow = (index + 1) % 4 === 0;
 
       const left = isLastInRow
-        ? rect.left - (containerRect?.left ?? 0) - 320 
-        : rect.right - (containerRect?.left ?? 0) + 10; 
+        ? rect.left - (containerRect?.left ?? 0) - 320
+        : rect.right - (containerRect?.left ?? 0) + 10;
 
       const top = rect.top - (containerRect?.top ?? 0);
 
@@ -32,29 +32,46 @@ export default function RecentlyCourses() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto py-16 relative">
-      <h2 className="text-2xl font-bold text-center mb-8">Recently added courses</h2>
+    <div className="max-w-6xl mx-auto py-16 relative mb-32">
+      <h2 className="text-4xl font-bold text-center mt-20">
+        Recently added courses
+      </h2>
 
-      <div className="relative" onMouseLeave={handleMouseLeave}>
+      <div className="relative mt-20" onMouseLeave={handleMouseLeave}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {courses.map((course, index) => (
             <div
               key={index}
-              ref={(el) => (cardsRef.current[index] = el)}
+              ref={(el) => {
+                cardsRef.current[index] = el;
+              }}
               className="relative bg-white shadow-lg overflow-hidden cursor-pointer transition-transform   border-2 hover:border-orange-500"
               onMouseEnter={() => handleMouseEnter(index)}
             >
-              <img src={course.image} alt={course.title} className="w-full h-40 object-cover" />
+              <img
+                src={course.image}
+                alt={course.title}
+                className="w-full h-40 object-cover"
+              />
               <div className="p-4">
-                <span className="text-xs font-bold uppercase text-gray-500 bg-gray-100 px-2 py-1 rounded">
-                  {course.category}
-                </span>
-                <h3 className="text-md font-semibold mt-1">{course.title}</h3>
-                <div className="flex items-center mt-2 text-gray-500 text-sm">
-                  <Star weight="fill" className="text-orange-400 mr-1" size={14} /> {course.rating}
-                  <Users className="ml-2 text-purple-400 mr-1" size={14} /> {course.students}
+                <div className="flex justify-between items-center">
+                  <span className="text-xs font-bold uppercase text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                    {course.category}
+                  </span>
+                  <span className="text-red-500 font-bold text-lg mt-2 block">
+                    {course.price}
+                  </span>
                 </div>
-                <span className="text-red-500 font-bold text-lg mt-2 block">{course.price}</span>
+                <h3 className="text-md font-semibold mt-1">{course.title}</h3>
+                <div className="mt-auto pt-2 border-t border-gray-200 flex justify-between items-center">
+                  <span className="text-orange-500 text-xs flex items-center">
+                    <Star weight="fill" className="" />
+                    {course.rating}
+                  </span>
+                  <span className="text-gray-500 text-xs font-semibold">
+                    <Users className="mr-1" /> {course.students}
+                  </span>
+                </div>
               </div>
             </div>
           ))}
@@ -71,7 +88,7 @@ export default function RecentlyCourses() {
       </div>
 
       <div className="text-center mt-8">
-        <button className="bg-orange-100 text-orange-500 px-6 py-3 text-sm font-bold">
+        <button className="bg-orange-100 text-orange-500 px-6 py-3 text-sm font-semibold">
           Browse All Courses →
         </button>
       </div>
