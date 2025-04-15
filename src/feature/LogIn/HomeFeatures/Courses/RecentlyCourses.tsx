@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Star, Users } from "phosphor-react";
-import Hover from "../../../components/Hover";
+import Hover from "../../../../components/Hover";
 import { courses } from "../Courses/data/courses";
 
 export default function RecentlyCourses() {

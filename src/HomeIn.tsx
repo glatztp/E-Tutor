@@ -1,44 +1,21 @@
-import { Link } from "react-router-dom";
-import HomeImg from "./assets/Images.svg";
-import Categories from "./feature/LogOut/HomeFeatures/Categories/CategoriesPage";
-import Courses from "./feature/LogOut/HomeFeatures/Courses/CousesPage";
-import FeaturedCourses from "./feature/LogOut/HomeFeatures/Courses/FeaturedCourses";
-import RecentlyCourses from "./feature/LogOut/HomeFeatures/Courses/RecentlyCourses";
+
+import Courses from "./feature/LogIn/HomeFeatures/Courses/CousesPage";
+import RecentlyCourses from "./feature/LogIn/HomeFeatures/Courses/RecentlyCourses";
 import Instructor from "./assets/Instructor.svg";
 import { ArrowRight } from "phosphor-react";
-import Instructors from "./feature/LogOut/HomeFeatures/Instructors/InstructorsPage";
+import Instructors from "./feature/LogIn/HomeFeatures/Instructors/InstructorsPage";
 import Companies from "./assets/Companies.svg";
+import PopularToolsSection from "./feature/LogIn/HomeFeatures/Courses/PopularTools";
 
 export default function Home() {
   return (
     <div>
-      <div className="flex items-center justify-between h-full px-20 pt-10 pb-10 bg-gray-100">
-        <div className="flex flex-col justify-center w-1/2 pr-8">
-          <h1 className="text-6xl font-semibold text-black mb-10">
-            Learn with expert anytime anywhere
-          </h1>
-          <p className="text-lg text-gray-500 mb-8">
-            Our mission is to help people to find the best course online and
-            learn with expert anytime, anywhere.
-          </p>
-          <Link to="/signup">
-            <button className="bg-orange-500 text-white py-3 px-8  hover:bg-orange-600 transition mt-3">
-              Create Account
-            </button>
-          </Link>
-        </div>
-        <div className="w-1/2 flex justify-end">
-          <img
-            src={HomeImg}
-            className="w-full max-w-xl -mr-20 "
-            alt="Learning Illustration"
-          />
-        </div>
-      </div>
-      <Categories />
+      
+
       <Courses />
-      <FeaturedCourses />
-      <RecentlyCourses />
+      <PopularToolsSection/>
+      <Instructors />
+      
 
       <div className="flex items-center justify-center bg-gray-100 py-20 px-10">
         <div className="flex flex-col md:flex-row w-full max-w-full overflow-hidden">
@@ -87,7 +64,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Instructors />
+      <RecentlyCourses />
+      
 
       <div className="flex items-center justify-center bg-gray-100 py-20 px-10">
         <div className="flex flex-col md:flex-row w-full max-w-6xl items-center justify-between gap-10">
@@ -100,6 +78,7 @@ export default function Home() {
               taciti sociosqu ad litora torquent per conubia nostra.
             </p>
           </div>
+          
 
           <div className="grid grid-cols-3 w-full h-full">
             <img src={Companies} alt="Company 1" />
@@ -110,6 +89,7 @@ export default function Home() {
             <img src={Companies} alt="Company 1" />
 
           </div>
+          
         </div>
       </div>
     </div>
