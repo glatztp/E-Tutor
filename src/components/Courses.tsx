@@ -15,178 +15,19 @@ interface Course {
   image: string;
 }
 
+interface CoursesProps {
+  courses: Course[];
+}
+
 const categoryColors: Record<string, { bg: string; text: string }> = {
   DESIGN: { bg: "bg-orange-100", text: "text-orange-500" },
   DEVELOPMENT: { bg: "bg-purple-100", text: "text-purple-500" },
   BUSINESS: { bg: "bg-green-100", text: "text-green-500" },
   MARKETING: { bg: "bg-purple-100", text: "text-purple-500" },
-  MUSIC: { bg: "bg-yellow-100", text: "text-yellow-600" },
-  "HEALTH & FITNESS": { bg: "bg-green-100", text: "text-green-600" },
-  LYFESTYLE: { bg: "bg-yellow-100", text: "text-yellow-600" },
   "IT & SOFTWARE": { bg: "bg-red-100", text: "text-red-600" },
 };
 
-const courses: Course[] = [
-  {
-    category: "DESIGN",
-    title: "Machine Learning A-Z™: Hands-On Python & R In Data...",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Desing,
-  },
-  {
-    category: "DEVELOPMENT",
-    title: "The Complete 2021 Web Development Bootcamp",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Dev,
-  },
-  {
-    category: "BUSINESS",
-    title: "Learn Python Programming Masterclass",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Business,
-  },
-  {
-    category: "MARKETING",
-    title: "The Complete Digital Marketing Course - 12 Courses in 1",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Marketing,
-  },
-  {
-    category: "IT & SOFTWARE",
-    title: "Reiki Level I, II and Master/Teacher Program",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: IT,
-  },
-  {
-    category: "DESIGN",
-    title: "Machine Learning A-Z™: Hands-On Python & R In Data...",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Desing,
-  },
-  {
-    category: "DEVELOPMENT",
-    title: "The Complete 2021 Web Development Bootcamp",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Dev,
-  },
-  {
-    category: "BUSINESS",
-    title: "Learn Python Programming Masterclass",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Business,
-  },
-  {
-    category: "MARKETING",
-    title: "The Complete Digital Marketing Course - 12 Courses in 1",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Marketing,
-  },
-  {
-    category: "IT & SOFTWARE",
-    title: "Reiki Level I, II and Master/Teacher Program",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: IT,
-  },
-  {
-    category: "DESIGN",
-    title: "Machine Learning A-Z™: Hands-On Python & R In Data...",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Desing,
-  },
-  {
-    category: "DEVELOPMENT",
-    title: "The Complete 2021 Web Development Bootcamp",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Dev,
-  },
-  {
-    category: "BUSINESS",
-    title: "Learn Python Programming Masterclass",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Business,
-  },
-  {
-    category: "MARKETING",
-    title: "The Complete Digital Marketing Course - 12 Courses in 1",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Marketing,
-  },
-  {
-    category: "IT & SOFTWARE",
-    title: "Reiki Level I, II and Master/Teacher Program",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: IT,
-  },
-  {
-    category: "DESIGN",
-    title: "Machine Learning A-Z™: Hands-On Python & R In Data...",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Desing,
-  },
-  {
-    category: "DEVELOPMENT",
-    title: "The Complete 2021 Web Development Bootcamp",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Dev,
-  },
-  {
-    category: "BUSINESS",
-    title: "Learn Python Programming Masterclass",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Business,
-  },
-  {
-    category: "MARKETING",
-    title: "The Complete Digital Marketing Course - 12 Courses in 1",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: Marketing,
-  },
-  {
-    category: "IT & SOFTWARE",
-    title: "Reiki Level I, II and Master/Teacher Program",
-    price: "$57",
-    rating: "5.0",
-    students: "265.7K students",
-    image: IT,
-  },
+const defaultCourses: Course[] = [
   {
     category: "DESIGN",
     title: "Machine Learning A-Z™: Hands-On Python & R In Data...",
@@ -269,18 +110,11 @@ const courses: Course[] = [
   },
 ];
 
-interface CourseProps {
-  limit?: number;
-}
-
-const Course: React.FC<CourseProps> = ({ limit }) => {
-  const displayedCourses = limit ? courses.slice(0, limit) : courses;
-
+const Courses: React.FC<CoursesProps> = ({ courses = defaultCourses }) => {
   return (
-    <div className="text-center py-20 px-10 ">
-      
+    <div className="text-center py-20">
       <div className="grid grid-cols-5 gap-4 max-w-6xl mx-auto">
-        {displayedCourses.map((course, index) => {
+        {courses.map((course, index) => {
           const colors = categoryColors[course.category] || {
             bg: "bg-gray-100",
             text: "text-gray-500",
@@ -300,9 +134,7 @@ const Course: React.FC<CourseProps> = ({ limit }) => {
               <div className="p-3 text-left flex flex-col flex-grow">
                 <div className="flex justify-between items-center">
                   <span
-                    className={`text-xs font-bold uppercase p-1 ${
-                      colors.bg
-                    } ${colors.text} mb-2`}
+                    className={`text-xs font-bold uppercase p-1 ${colors.bg} ${colors.text} mb-2`}
                   >
                     {course.category}
                   </span>
@@ -331,4 +163,4 @@ const Course: React.FC<CourseProps> = ({ limit }) => {
   );
 };
 
-export default Course;
+export default Courses;
