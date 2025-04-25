@@ -1,21 +1,20 @@
-
-import Courses from "./feature/LogIn/HomeFeatures/Courses/CousesPage";
 import RecentlyCourses from "./feature/LogIn/HomeFeatures/Courses/RecentlyCourses";
 import Instructor from "./assets/Instructor.svg";
 import { ArrowRight } from "phosphor-react";
 import Instructors from "./feature/LogIn/HomeFeatures/Instructors/InstructorsPage";
 import Companies from "./assets/Companies.svg";
 import PopularToolsSection from "./feature/LogIn/HomeFeatures/Courses/PopularTools";
+import CoursesBest from "./feature/LogIn/HomeFeatures/Courses/CousesPage";
+import CoursesTeste from "./feature/LogIn/HomeFeatures/Courses/Courses";
 
 export default function Home() {
   return (
     <div>
-      
+      <CoursesBest />
 
-      <Courses />
-      <PopularToolsSection/>
+      <PopularToolsSection />
       <Instructors />
-      
+      <CoursesTeste/>
 
       <div className="flex items-center justify-center bg-gray-100 py-20 px-10">
         <div className="flex flex-col md:flex-row w-full max-w-full overflow-hidden">
@@ -65,7 +64,6 @@ export default function Home() {
         </div>
       </div>
       <RecentlyCourses />
-      
 
       <div className="flex items-center justify-center bg-gray-100 py-20 px-10">
         <div className="flex flex-col md:flex-row w-full max-w-6xl items-center justify-between gap-10">
@@ -78,7 +76,6 @@ export default function Home() {
               taciti sociosqu ad litora torquent per conubia nostra.
             </p>
           </div>
-          
 
           <div className="grid grid-cols-3 w-full h-full">
             <img src={Companies} alt="Company 1" />
@@ -87,9 +84,7 @@ export default function Home() {
             <img src={Companies} alt="Company 1" />
             <img src={Companies} alt="Company 1" />
             <img src={Companies} alt="Company 1" />
-
           </div>
-          
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import Dev from "../../../../assets/Dev.svg";
 import Marketing from "../../../../assets/Marketing.svg";
 import IT from "../../../../assets/IT.svg";
 
-export default function Courses() {
+export default function CoursesBest() {
   const categoryColors: Record<string, { bg: string; text: string }> = {
     DESIGN: { bg: "bg-orange-100", text: "text-orange-500" },
     DEVELOPMENT: { bg: "bg-purple-100", text: "text-purple-500" },

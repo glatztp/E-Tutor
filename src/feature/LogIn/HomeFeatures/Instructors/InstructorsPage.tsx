@@ -43,10 +43,10 @@ export default function Intructors() {
   ];
 
   return (
-    <div className="text-center py-30 px-30 bg-gray-100">
+    <div className="text-center py-30 px-30 bg-gray-100 mt-10">
       <div className="bg-white border pt-20 pb-32 px-10 mr-5 ml-5">
         <h2 className="text-4xl font-bold mb-16">
-          Top Instructors of the Month
+          Popular Instructor in Web Development
         </h2>
         <div className="grid grid-cols-5 gap-4 max-w-6xl mx-auto">
           {instrutors.map((course, index) => (
@@ -79,12 +79,6 @@ export default function Intructors() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="text-center mt-8 -mb-20 flex flex-col items-center">
-          <p>Thousands of students waiting for a instructor. Start teaching & earnig now! </p>
-          <button className=" text-orange-500 px-6 py-3 text-sm font-semibold">
-            Browse All Courses →
-          </button>
         </div>
       </div>
     </div>

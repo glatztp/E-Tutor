@@ -92,7 +92,7 @@ export default function PopularToolsSection() {
           <div
             key={tool.id}
             ref={(el) => (toolRefs.current[tool.name] = el)}
-            className="border p-6 bg-white dark:bg-zinc-900 hover:shadow-md transition hover:text-orange-500 hover:border-orange-500"
+            className="border p-4  bg-white dark:bg-zinc-900 hover:shadow-md transition hover:text-orange-500 hover:border-orange-500"
           >
             <h3 className="font-semibold mb-2">{tool.name}</h3>
             <p className="text-sm text-muted-foreground pt-1 opacity-40">
